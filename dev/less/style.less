@@ -1,0 +1,438 @@
+
+@import "variables.less";
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Microsoft YaHei";
+}
+ul>li{
+	list-style: none; 
+}
+
+.wis-dashed{
+    border-top: 2px dashed #666;
+    margin: 30px 0;
+}
+
+.wis-bc-default{
+	background-color: @color-default;
+}
+.wis-bc-primary{
+	background-color: @color-primary;
+}
+.wis-bc-secondary{
+	background-color: @color-secondary;
+}
+.wis-bc-success{
+	background-color: @color-success;
+}
+.wis-bc-warning{
+	background-color: @color-warning;
+}
+.wis-bc-danger{
+	background-color: @color-danger;
+}
+
+.wis-base-color{
+	height: 30px;
+    overflow: hidden;
+    position: relative;
+	>label{
+		width: 80px;
+	    line-height: 30px;
+	    position: absolute;
+	}
+	>div{
+		height: 16px;
+	    margin: 7px 0 7px 80px;
+	}
+}
+
+
+
+.wis-btn{
+	margin: 10px 0;
+	>button {
+	    outline: 0;
+	    width: 100%;
+	    padding: 6px 0;
+	    font-size: 1rem;
+	    border: 2px solid;
+	    border-radius: 4px;
+	    cursor: pointer;
+	    text-shadow: none;
+	    color: #fff;
+	}
+	>.wis-btn-default{
+		color: #000;
+		border-color: @color-default;
+		.wis-bc-default;
+	}
+	>.wis-btn-primary{
+		border-color: @color-primary;
+		.wis-bc-primary;
+	}
+	>.wis-btn-secondary{
+		border-color: @color-secondary;
+		.wis-bc-secondary;
+	}
+	>.wis-btn-success{
+		border-color: @color-success;
+		.wis-bc-success;
+	}
+	>.wis-btn-warning{
+		border-color: @color-warning;
+		.wis-bc-warning;
+	}
+	>.wis-btn-danger{
+		border-color: @color-danger;
+		.wis-bc-danger;
+	}
+}
+
+.wis-form-group{
+	margin-bottom: 10px;
+	>label{
+		font-size: 1rem;
+		float: left;
+		height: 33px;
+    	line-height: 33px;
+        overflow: hidden;
+	    max-width: 40px;
+	    white-space: nowrap;
+	}
+	>div{
+	    margin-left: 40px;
+		>div{
+	    margin-right: 28px;
+			>input{
+			    width: 100%;
+				padding: 6px 12px;
+			    border: 2px solid #bbb;
+			    border-color: @color-secondary;
+			    outline: 0;
+			    border-radius: 2px;
+			    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+			    //box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+			}
+		}
+	}
+	
+}
+
+.wis-form-block{
+	margin-bottom: 10px;
+	>label{
+	    font-size: 1rem;
+	    height: 33px;
+	    line-height: 33px;
+	    overflow: hidden;
+	    white-space: nowrap;
+	    display: block;
+	}
+	>div.wis-fb-inputC{
+	    margin-right: 28px;
+	    >input{
+	    	width: 100%;
+			padding: 6px 12px;
+		    border: 2px solid #bbb;
+		    border-color: @color-secondary;
+		    outline: 0;
+		    border-radius: 2px;
+		    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+	    }
+	}
+	>div.wis-fb-textareaC{
+	    margin-right: 16px;
+	    >textarea{
+	        border: 2px solid @color-secondary;
+		    width: 100%;
+		    min-height: 80px;
+		    outline: 0px;
+		    padding: 6px;
+		    margin: 0px;
+		    resize: vertical;
+	    }
+	}
+}
+.wis-nor-select{
+	position: relative;
+	&:before{
+    	position: absolute;
+	    right: 10px;
+	    top: 2px;
+	    font-family: "FontAwesome";
+	    content: "\f107";
+	    font-size: 1.4rem;
+	    height: 38px;
+	    color: @color-primary;
+	    line-height: 38px;
+	    background-color: #fff;
+    }
+	>select{
+		position: relative;
+	    width: 100%;
+	    outline: 0;
+	    border: 2px solid @color-secondary;
+	    height: 42px;
+	    font-size: 1rem;
+	    padding: 4px 25px 4px 12px;
+	    background-color: rgba(0,0,0,0);
+	    appearance: none;
+	    -webkit-appearance: none;
+	}
+}
+ul.wis-tabs{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+	border-bottom: 2px solid @color-primary;
+	background-color: #f6f6f6;
+	>li{
+		display: inline-block;
+		color: #666;
+		cursor: pointer;
+		padding: 8px 0;
+		text-align: center;
+		transition: all 300ms ease;
+		-webkit-transition: all 300ms ease;
+		&.active{
+		    background-color: @color-primary;
+		    color: #fff;
+		    transition: all 300ms ease;
+		    -webkit-transition: all 300ms ease;
+		}
+		>span{
+			font-size: 1rem;
+		}
+	}
+}
+.wis-nnlist2{
+	padding-top: 39px;
+    position: relative;
+    >ul.wis-listC-block{
+    	padding: 10px 8px;
+    	>li{
+    		&:hover{
+    			border-color: @color-secondary;
+    		};
+    		border: 2px solid @color-default;
+    		padding: 8px;
+    	    margin-bottom: 10px;
+    		cursor: pointer;
+    		>p{
+    			word-break: break-all;
+    			&.wis-lcb-title{
+    				font-size: 1rem;
+    				font-weight: bold;
+    			}
+			    &.wis-lcb-desc{
+    				font-size: 0.8rem;
+    			}
+    			&.wis-lcb-text{
+    				font-size: 1rem;
+    			}
+    		}
+    		>img{
+    		    display: block;
+			    width: 100%;
+			    margin: 5px 0;
+    		}
+    		>span{
+    		    font-size: 13px;
+			    margin-right: 20px;
+			    color: #666;	
+    		}
+    	}
+    }
+}
+.wis-nnlist{
+	padding-top: 39px;
+    position: relative;
+	>ul.wis-listC{
+	    >li{
+    		padding: 10px;
+    		border-bottom: 1px solid @color-secondary;
+    		cursor: pointer;
+    		>p{
+    			font-size: 1rem;
+    		}
+    		>span{
+    			font-size: 13px;
+    			color: #666;
+    			margin-right: 20px;
+    		}
+	    }
+	}
+	>ul.wis-listC-angle{
+		>li{
+			padding: 10px 30px 10px 10px;
+			position: relative;
+			>i{
+				position: absolute;
+				top: 30%;
+				color: #666;
+				font-size: 1.6rem;
+				width: 30px;
+				right: 0;
+				text-align: center;
+			}
+		}
+	}
+}
+
+.wis-detail-head{
+	margin: 0 0.3em 10px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid @color-secondary;
+    overflow: hidden;
+    >div.wis-tag{
+    	>span{
+    		background-color: @color-success;
+		    color: #fff;
+		    font-size: 0.8rem;
+		    display: inline-block;
+		    padding: 0.5em;
+		    width: 80px;
+		    text-align: center;
+    	}
+    }
+    >p{
+    	font-weight: bold;
+	    text-align: center;
+	    font-size: 1.3rem;
+	    padding: 10px 0;
+    }
+    >div.wis-dh-info{
+    	font-size: 0.8rem;
+    	color: #666;
+    }
+}
+
+.wis-detail-content{
+	margin: 0 0.5em;
+	>div.wis-imgC{
+		margin: 6px 6px 6px 0;
+		>img{
+			width: 100% !important;
+			height: auto !important;
+			display: block !important;
+			border: 3px solid #fff;
+			box-shadow: 0 0 3px rgba(0,0,0,.35) !important;
+		}
+	}
+}
+
+.wis-table{
+	width: 100%;
+    border: solid #e6e6e6;
+    border-width: 1px 0 0 1px;
+    border-spacing: 0;
+    text-shadow: none;
+    >caption{
+	    font-size: 1.2rem;	
+	    color: #000;
+	    margin-bottom: 5px;
+    }
+    th{
+    	background-color: @color-primary;
+    	color: #fff;
+    	font-size: 1rem;
+    }
+    td{
+    	font-size: 0.8rem;
+    }
+    th, td{
+    	border: solid #e6e6e6;
+    	border-width: 0 1px 1px 0;
+    	word-break: break-all;
+    	padding: 6px;
+    }
+    >tfoot{
+    	font-weight: bold;
+    }
+}
+
+.wis-datatime{
+	position: relative;
+	margin-right: 40px;
+	&:before{
+    	position: absolute;
+	    right: -34px;
+	    top: 2px;
+	    content: "\f073";
+	    font-size: 1rem;
+	    height: 29px;
+	    color: @color-primary;
+        font-family: FontAwesome;
+    	line-height: 33px;
+    }
+	>input{
+		position: relative;
+		border: 2px solid @color-secondary;
+	    padding: 6px 24px 6px 12px;
+	    width: 100%;
+	    background-color: rgba(0,0,0,0);
+	}
+}
+
+.wis-switch{
+	display: inline-block;
+	background-color: #e6e6e6;
+	border-radius: 4px;
+	cursor: pointer;
+	height: 30px;
+	position: relative;
+	width: 70px;
+	border: none;
+	transition: all 0.5s ease 0s;
+	-webkit-transition: all 0.5s ease 0s;
+	&:after{
+		background-color: #bbb;
+		border: none;
+		border-radius: 4px;
+		content: "";
+		height: 20px;
+		left: 5px;
+		position: absolute;
+		top: 5px;
+		width: 20px;
+		transition: all 0.5s ease 0s;
+		-webkit-transition: all 0.5s ease 0s;
+	}
+	&.on:after{
+		background-color: #fff;
+		left: 45px;
+	}
+	&.on, &.success.on{
+		background-color: @color-success;
+	}
+	&.primary.on{
+		background-color: @color-primary;
+	}
+	&.secondary.on{
+		background-color: @color-secondary;
+	}
+	&.warning.on{
+		background-color: @color-warning;
+	}
+	&.danger.on{
+		background-color: @color-danger;
+	}
+}
+
+.wis-error{
+	>img{
+		display: block;
+	    margin: 100px auto 40px;
+	    width: 200px;
+	}
+	>p{
+		text-align: center;
+	    font-size: 1.2rem;
+	    color: #f1f1f1;
+	    margin-bottom: 10px;
+	}
+}

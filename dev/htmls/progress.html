@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>加载动画样式</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- UIFramework框架 -->
+    <script src="UIFramework/js/jquery-2.1.1.min.js"></script>
+    <link href="UIFramework/main.css" rel="stylesheet">
+    <script src="UIFramework/js/public.js"></script>
+
+    <!-- demo样式及脚本 -->
+    <link href="css/temp.css" rel="stylesheet">
+    <script>
+        function showProgress(){
+            wisProgress(true);
+            setTimeout(function(){
+                wisProgress(false);
+            }, 3000);
+        }
+    </script>
+    
+</head>
+<body style="margin: 10px;">
+	<div class="temp-proC">
+		<button onclick="showProgress();">弹出</button>
+	</div>
+	<div class="temp-txt">
+		<h2>使用方法：</h2>
+		<h3>1.弹出：wisProgress(true)</h3>
+		<h3>2.消失：wisProgress(false)</h3>
+	</div>
+
+</body>
+</html>

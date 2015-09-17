@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>基础及表单样式</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- UIFramework框架 -->
+	<script src="UIFramework/js/jquery-2.1.1.min.js"></script>
+    <link href="UIFramework/main.css" rel="stylesheet">
+    <script src="UIFramework/js/public.js"></script>
+
+    <!-- datetimepicker组件 -->
+	<script src="UIFramework/js/datetimepicker.js"></script>
+
+    <!-- iCheck组件 -->
+	<script src="UIFramework/js/icheck.js"></script>
+
+	<!-- jquery.dropdown组件 -->
+	<script src="UIFramework/js/jquery.dropdown.min.js"></script>
+
+	<!-- demo样式及脚本 -->
+	<link href="css/temp.css" rel="stylesheet">
+	<script>
+		$(function(){
+			//datetimepicker
+			$(".form_datetime").datetimepicker({
+		    	format:'yyyy-mm-dd hh:ii',
+		    	autoclose: true,
+		    	todayBtn: true
+		    });
+
+			//iCheck
+			$('#temp-icheck input').iCheck({
+			    checkboxClass: 'icheckbox_square-blue',
+			    radioClass: 'iradio_square-blue',
+			    increaseArea: '20%' 
+			});
+
+			//下拉框2
+		  	$('#dropdown').dropdown({
+			    // speed : 1000,
+			    // initial stack effect
+			    stack : false,
+			    // delay between each option animation
+			    delay : 0,
+			    // effect to slide in the options. value is the margin to start with
+			    slidingIn : 400
+		  	});
+
+		  	//switch
+		  	$(".wis-switch").addClass('on');
+		  	$(".wis-switch").on('click', function(event){
+		  		event.preventDefault();
+		  		if($(this).hasClass('on')){
+		  			$(this).removeClass('on');
+		  		}else{
+		  			$(this).addClass('on');
+		  		}
+		  	});
+		});
+	</script>
+
+</head>
+<body style="margin: 10px;">
+	<h3 id="temp-title">基础样式</h3>
+	<div id="temp-contrain">
+		<div class="wis-base-color">
+			<label for="">#e6e6e6</label>
+			<div class="wis-bc-default"></div>
+		</div>
+		<div class="wis-base-color">
+			<label for="">#0e90d2</label>
+			<div class="wis-bc-primary"></div>
+		</div>
+		<div class="wis-base-color">
+			<label for="">#3bb4f2</label>
+			<div class="wis-bc-secondary"></div>
+		</div>
+		<div class="wis-base-color">
+			<label for="">#5eb95e</label>
+			<div class="wis-bc-success"></div>
+		</div>
+		<div class="wis-base-color">
+			<label for="">#f37b1d</label>
+			<div class="wis-bc-warning"></div>
+		</div>
+		<div class="wis-base-color">
+			<label for="">#dd514c</label>
+			<div class="wis-bc-danger"></div>
+		</div>
+	</div>
+
+
+	<h3 id="temp-title">表单元素</h3>
+	<div id="temp-contrain">
+		<div class="wis-btn"><button type="button" class="wis-btn-default">默认样式</button></div>
+		<div class="wis-btn"><button type="button" class="wis-btn-primary">主色按钮</button></div>
+		<div class="wis-btn"><button type="button" class="wis-btn-secondary">次色按钮</button></div>
+		<div class="wis-btn"><button type="button" class="wis-btn-success">绿色按钮</button></div>
+		<div class="wis-btn"><button type="button" class="wis-btn-warning">橙色按钮</button></div>
+		<div class="wis-btn"><button type="button" class="wis-btn-danger">红色按钮</button></div>
+
+		<div class="wis-dashed"></div>
+
+		<div class="wis-form-group">
+			<label for="zhInputId1">帐号</label>
+			<div><div>
+				<input type="email" id="zhInputId1" placeholder="Email">
+			</div></div>
+		</div>
+		<div class="wis-form-group">
+			<label for="mmInputId1">密码</label>
+			<div><div>
+				<input type="password" id="mmInputId1" placeholder="Password">
+			</div></div>
+		</div>
+
+		<div class="wis-dashed"></div>
+
+		<p style="line-height: 33px;">时间选择器</p>
+		<div class="wis-datatime">
+			<input size="16" type="text" value="2012-06-15 14:45" readonly class="form_datetime">
+		</div>
+
+		<div class="wis-dashed"></div>
+
+		<div class="wis-form-block">
+			<label for="zhInputId2">帐号</label>
+			<div class="wis-fb-inputC">
+				<input type="email" id="zhInputId2" placeholder="Email">
+			</div>
+		</div>
+		<div class="wis-form-block">
+			<label for="mmInputId2">密码</label>
+			<div class="wis-fb-inputC">
+				<input type="password" id="mmInputId2" placeholder="Password">
+			</div>
+		</div>
+
+		<div class="wis-dashed"></div>
+
+		<div class="wis-form-block">
+			<label for="textareaId">文本域</label>
+			<div class="wis-fb-textareaC">
+				<textarea name="textarea" id="textareaId"></textarea>
+			</div>
+		</div>
+
+		<div class="wis-dashed"></div>
+
+		<div>
+			<p style="line-height: 33px;">下拉框1</p>
+			<div class="wis-nor-select">
+				<select>
+					<option value="-1" selected>Select a browser</option>
+					<option value="1" class="icon-chrome">Chrome</option>
+					<option value="2" class="icon-safari">Safari</option>
+					<option value="3" class="icon-IE">Internet Explorer</option>
+					<option value="4" class="icon-firefox">Firefox</option>
+					<option value="5" class="icon-opera">Opera</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="wis-dashed"></div>
+		
+		<div>
+			<p style="line-height: 33px;">下拉框2</p>	
+			<select id="dropdown" class="cd-select">
+				<option value="-1" selected>Select a browser</option>
+				<option value="1" class="icon-chrome">Chrome</option>
+				<option value="2" class="icon-safari">Safari</option>
+				<option value="3" class="icon-IE">Internet Explorer</option>
+				<option value="4" class="icon-firefox">Firefox</option>
+				<option value="5" class="icon-opera">Opera</option>
+			</select>
+		</div>
+
+		<div class="wis-dashed"></div>
+
+		<div id="temp-icheck">
+			<p style="line-height: 33px;">复选框</p>
+			<div>
+				<input type="checkbox" id="check1">
+				<label for="check1">Checkbox 1</label>
+			</div>
+			<div>
+				<input type="checkbox" id="check2" checked>
+				<label for="check2">Checkbox 2</label>
+			</div>
+		</div>
+		<div id="temp-icheck">
+			<p style="line-height: 33px;">单选框</p>
+			<div>
+				<input type="radio" id="radio1" name="iCheck">
+				<label for="radio1">Radio button 1</label>
+			</div>
+			<div>
+				<input type="radio" id="radio2" name="iCheck" checked>
+				<label for="radio2">Radio button 2</label>
+			</div>
+		</div>
+		<a id="temp-icheck-a" target="_blank" href="http://www.bootcss.com/p/icheck/">更多iCheck信息</a>
+
+		<div class="wis-dashed"></div>
+
+		<p style="line-height: 33px;">控制器</p>
+
+		<div class="wis-switch"></div>
+		<div class="wis-switch primary"></div>
+		<div class="wis-switch secondary"></div>
+		<div class="wis-switch success"></div>
+		<div class="wis-switch warning"></div>
+		<div class="wis-switch danger"></div>
+
+		<div class="wis-dashed"></div>
+
+	</div>
+</body>
+</html>
