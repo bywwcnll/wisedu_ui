@@ -1,5 +1,5 @@
 {
-  "name": "wisedu",
+  "name": "wisedu_ui",
   "version": "1.0.0",
   "description": "UI Model",
   "main": "Gruntfile.js",
@@ -7,8 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
+    "ui",
     "wisedu",
-    "ui"
+    "wisedu_ui"
   ],
   "author": "Gaven Wang",
   "license": "MIT",

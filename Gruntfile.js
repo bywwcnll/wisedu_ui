@@ -8,8 +8,8 @@ module.exports = function (grunt) {
 	//实时监测
 	watch: {
 		less:{//less样式文件检测
-			files: ['dev/css/style.less'],
-			tasks: ['less:development','cssmin:development'],
+			files: ['dev/less/*.less'],
+			tasks: ['less:development'],
 			options: {
 				spawn: false,														//很重要
 				debounceDelay: 250,
@@ -54,16 +54,16 @@ module.exports = function (grunt) {
 	grunt.event.on('watch', function(action, filepath, target) {
 		if(target === 'less'){
 			var cssPath = filepath.replace('.less', '.css');
-			cssPath = cssPath.replace('dev', 'dist');
+			cssPath = cssPath.replace('less', 'css');
 			grunt.config.set('less.development.files', [{
 				src: filepath,
 				dest: cssPath
 			}]);
-			var minCssPath = cssPath.replace('.css', '.min.css');
-			grunt.config.set('cssmin.development.files', [{
-				src: cssPath,
-				dest: minCssPath
-			}]);
+			// var minCssPath = cssPath.replace('.css', '.min.css');
+			// grunt.config.set('cssmin.development.files', [{
+			// 	src: cssPath,
+			// 	dest: minCssPath
+			// }]);
 		}
 	});
 	
