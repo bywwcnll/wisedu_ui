@@ -53,10 +53,12 @@ module.exports = function (grunt) {
 	//自定义事件
 	grunt.event.on('watch', function(action, filepath, target) {
 		if(target === 'less'){
-			var cssPath = filepath.replace('.less', '.css');
-			cssPath = cssPath.replace('less', 'css');
+			var cssPath = filepath.replace(/less/g, 'css');
+			var filename = cssPath.substring(cssPath.lastIndexOf("\\")+1, cssPath.lastIndexOf("."));
+			cssPath = cssPath.replace(filename, "style");
+			var stylePath = filepath.replace(filename, "style");
 			grunt.config.set('less.development.files', [{
-				src: filepath,
+				src: stylePath,
 				dest: cssPath
 			}]);
 			// var minCssPath = cssPath.replace('.css', '.min.css');

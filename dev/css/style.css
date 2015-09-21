@@ -1,3 +1,5 @@
+/*******************border-width***********************/
+/*******************border-radius***********************/
 * {
   margin: 0;
   padding: 0;
@@ -51,7 +53,7 @@ ul > li {
   padding: 6px 0;
   font-size: 1rem;
   border: 2px solid;
-  border-radius: 4px;
+  border-radius: 0px;
   cursor: pointer;
   text-shadow: none;
   color: #fff;
@@ -97,12 +99,12 @@ ul > li {
   margin-left: 40px;
 }
 .wis-form-group > div > div {
-  margin-right: 28px;
+  margin-right: 26px;
 }
 .wis-form-group > div > div > input {
   width: 100%;
   padding: 6px 12px;
-  border: 2px solid #bbb;
+  border: 1px solid;
   border-color: #3bb4f2;
   outline: 0;
   border-radius: 2px;
@@ -120,27 +122,27 @@ ul > li {
   display: block;
 }
 .wis-form-block > div.wis-fb-inputC {
-  margin-right: 28px;
+  margin-right: 26px;
 }
 .wis-form-block > div.wis-fb-inputC > input {
   width: 100%;
   padding: 6px 12px;
-  border: 2px solid #bbb;
+  border: 1px solid;
   border-color: #3bb4f2;
   outline: 0;
   border-radius: 2px;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 .wis-form-block > div.wis-fb-textareaC {
-  margin-right: 16px;
+  margin-right: 14px;
 }
 .wis-form-block > div.wis-fb-textareaC > textarea {
-  border: 2px solid #3bb4f2;
+  border: 1px solid #3bb4f2;
+  border-radius: 2px;
   width: 100%;
   min-height: 80px;
   outline: 0px;
   padding: 6px;
-  margin: 0px;
   resize: vertical;
 }
 .wis-nor-select {
@@ -162,7 +164,8 @@ ul > li {
   position: relative;
   width: 100%;
   outline: 0;
-  border: 2px solid #3bb4f2;
+  border: 1px solid #3bb4f2;
+  border-radius: 2px;
   height: 42px;
   font-size: 1rem;
   padding: 4px 25px 4px 12px;
@@ -335,7 +338,7 @@ ul.wis-tabs > li > span {
 }
 .wis-datatime {
   position: relative;
-  margin-right: 40px;
+  margin-right: 38px;
 }
 .wis-datatime:before {
   position: absolute;
@@ -350,7 +353,7 @@ ul.wis-tabs > li > span {
 }
 .wis-datatime > input {
   position: relative;
-  border: 2px solid #3bb4f2;
+  border: 1px solid #3bb4f2;
   padding: 6px 24px 6px 12px;
   width: 100%;
   background-color: rgba(0, 0, 0, 0);
