@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>校园一卡通样式</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link href="../css/style.css" rel="stylesheet">
+    <link href="../css/font-awesome.css" rel="stylesheet">
+    <script src="../js/jquery-2.1.1.min.js"></script>
+
+</head>
+<body>
+    <div class="wis-card">
+        <div class="info">
+            <p class="head"><i class="fa fa-database"></i>校园卡余额</p>
+            <p class="money">70.64</p>
+            <p class="name">姓名：朱亚晓</p>
+            <p class="states"><span>状态: 正常</span><span>有效日期: 2025/07/15</span></p>
+        </div>
+        <div class="search">
+            <p>查询日期选择</p>
+            <div class="wis-nor-select">
+                <select>
+                    <option value="-1" selected>Select a browser</option>
+                    <option value="1" class="icon-chrome">Chrome</option>
+                    <option value="2" class="icon-safari">Safari</option>
+                    <option value="3" class="icon-IE">Internet Explorer</option>
+                    <option value="4" class="icon-firefox">Firefox</option>
+                    <option value="5" class="icon-opera">Opera</option>
+                </select>
+            </div>
+            <div class="wis-btn"><button type="button" class="wis-btn-success" onclick="window.location.href='cardDetail.html';">详单查询</button></div>
+        </div>
+    </div>
+</body>
+</html>

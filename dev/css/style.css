@@ -2,6 +2,7 @@
 /***************news-notice-list-color****************/
 /*******************border-width***********************/
 /*******************border-radius***********************/
+/*******************width&height***********************/
 * {
   margin: 0;
   padding: 0;
@@ -55,7 +56,7 @@ ul > li {
   padding: 6px 0;
   font-size: 1rem;
   border: 2px solid;
-  border-radius: 0px;
+  border-radius: 4px;
   cursor: pointer;
   text-shadow: none;
   color: #fff;
@@ -157,9 +158,9 @@ ul > li {
   font-family: "FontAwesome";
   content: "\f107";
   font-size: 1.4rem;
-  height: 38px;
+  height: 30px;
   color: #0e90d2;
-  line-height: 38px;
+  line-height: 30px;
   background-color: #fff;
 }
 .wis-nor-select > select {
@@ -168,7 +169,7 @@ ul > li {
   outline: 0;
   border: 1px solid #3bb4f2;
   border-radius: 2px;
-  height: 42px;
+  height: 34px;
   font-size: 1rem;
   padding: 4px 25px 4px 12px;
   background-color: rgba(0, 0, 0, 0);
@@ -418,4 +419,82 @@ ul.wis-tabs > li > span {
   font-size: 1.2rem;
   color: #f1f1f1;
   margin-bottom: 10px;
+}
+.wis-card > div.info {
+  margin: 10px;
+  border-radius: 5px;
+  background-color: #60a1f9;
+  color: #fff;
+  text-align: center;
+  font-size: 1rem;
+}
+.wis-card > div.info > p.head {
+  text-align: left;
+  padding: 10px;
+}
+.wis-card > div.info > p.head > i {
+  margin-right: 10px;
+}
+.wis-card > div.info > p.money {
+  font-size: 3rem;
+}
+.wis-card > div.info > p.name {
+  padding: 5px 0;
+  background-color: #90bdfb;
+}
+.wis-card > div.info > p.states {
+  padding: 10px;
+}
+.wis-card > div.info > p.states > span:first-child {
+  margin-right: 10px;
+}
+.wis-card > div.search {
+  border: solid #ddd;
+  border-width: 1px 0;
+  padding: 10px;
+  font-size: 1rem;
+}
+.wis-card > div.search > p {
+  margin-bottom: 10px;
+}
+.wis-card > div.search > div.wis-btn {
+  margin-top: 30px;
+}
+.wis-card > div.search > div.wis-btn > button {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+.wis-card-records {
+  padding: 8px;
+}
+.wis-card-records > table {
+  text-align: center;
+  border: none;
+}
+.wis-card-records > table > caption {
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: left;
+  margin-bottom: 0;
+  color: #aaa;
+}
+.wis-card-records > table th {
+  font-size: 0.8rem;
+  font-weight: normal;
+  padding: 8px 0;
+  border: none;
+  background-color: #e6e6e6;
+  color: #000;
+}
+.wis-card-records > table tr > td {
+  border-width: 0 0 1px 0;
+  word-break: normal;
+  width: 22%;
+}
+.wis-card-records > table tr > td > span {
+  color: #aaa;
+}
+.wis-card-records > table tr > td:last-child {
+  color: #f37b1d;
 }
