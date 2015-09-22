@@ -1,3 +1,5 @@
+/*******************base-color***********************/
+/***************news-notice-list-color****************/
 /*******************border-width***********************/
 /*******************border-radius***********************/
 * {
@@ -207,7 +209,7 @@ ul.wis-tabs > li > span {
   padding: 10px 8px;
 }
 .wis-nnlist2 > ul.wis-listC-block > li {
-  border: 2px solid #e6e6e6;
+  border: 1px solid #e6e6e6;
   padding: 8px;
   margin-bottom: 10px;
   cursor: pointer;
@@ -403,12 +405,15 @@ ul.wis-tabs > li > span {
 .wis-switch.danger.on {
   background-color: #dd514c;
 }
-.wis-error > img {
+.wis-error {
+  background-color: #c7b895;
+}
+.wis-error > div > img {
   display: block;
   margin: 100px auto 40px;
   width: 200px;
 }
-.wis-error > p {
+.wis-error > div > p {
   text-align: center;
   font-size: 1.2rem;
   color: #f1f1f1;
