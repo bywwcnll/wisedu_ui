@@ -176,6 +176,49 @@ ul > li {
   appearance: none;
   -webkit-appearance: none;
 }
+.wis-pop-select {
+  position: relative;
+}
+.wis-pop-select > p {
+  border: 1px solid #3bb4f2;
+  padding: 6px 25px 6px 6px;
+  cursor: pointer;
+  position: relative;
+}
+.wis-pop-select > p:before {
+  position: absolute;
+  right: 10px;
+  top: 2px;
+  font-family: "FontAwesome";
+  content: "\f107";
+  font-size: 1.4rem;
+  height: 30px;
+  color: #0e90d2;
+  line-height: 30px;
+  background-color: #fff;
+}
+.wis-pop-select > div {
+  display: none;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 9998;
+}
+.wis-pop-select > div > ul {
+  position: fixed;
+  background-color: #f1f1f1;
+  z-index: 9999;
+  box-shadow: 0 0 3px #666;
+  border: 3px solid #fff;
+  border-radius: 4px;
+  overflow-y: scroll;
+}
+.wis-pop-select > div > ul > li {
+  padding: 6px;
+  border-bottom: 1px solid #fff;
+}
 ul.wis-tabs {
   width: 100%;
   position: fixed;
@@ -464,6 +507,12 @@ ul.wis-tabs > li > span {
   width: 80%;
   margin: 0 auto;
   display: block;
+}
+.wis-card > div.search > div.wis-nor-select:before {
+  color: #000;
+}
+.wis-card > div.search > div.wis-nor-select > select {
+  border-color: #ddd;
 }
 .wis-card-records {
   padding: 8px;

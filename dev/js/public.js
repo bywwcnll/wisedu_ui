@@ -13,6 +13,20 @@ function wisProgress(flag){
 }
 
 $(function(){
+  //popselect组件初始化
+  exeAndResize(function(){
+    var _width = $(window).width();
+    var _height = $(window).height();
+    $(".wis-pop-select>div").height(_height);
+    var _top = ($(".wis-pop-select ul").height())>_height*0.4?_height*0.4:($(".wis-pop-select ul").height());
+    $(".wis-pop-select ul").css({
+      "width": _width*0.6,
+      "left": _width*0.4/2,
+      "top": (_height-_top)/2,
+      "max-height": _height*0.4
+    });
+  });
+
   //新闻公告列表样式设置
   $(".wis-tabs>li").css("width", (100/$(".wis-tabs>li").length)+"%");
   if($(".wis-tabs").length>0){
@@ -20,3 +34,10 @@ $(function(){
   }
 });
 
+function exeAndResize(fn){
+  fn();
+  $(window).on('resize', function(event) {
+    event.preventDefault();
+    fn();
+  });
+}

@@ -186,6 +186,49 @@ ul>li{
 	    -webkit-appearance: none;
 	}
 }
+.wis-pop-select{
+	position: relative;
+	>p{
+	    border: 1px solid @color-secondary;
+    	padding: 6px 25px 6px 6px;
+    	cursor: pointer;
+    	position: relative;
+    	&:before{
+    		position: absolute;
+		    right: 10px;
+		    top: 2px;
+		    font-family: "FontAwesome";
+		    content: "\f107";
+		    font-size: 1.4rem;
+		    height: (@popselect-height)-4px;
+		    color: @color-primary;
+		    line-height: (@popselect-height)-4px;
+		    background-color: #fff;
+    	};
+	}
+	>div{
+		display: none;
+		position: fixed;
+	    width: 100%;
+	    top: 0;
+	    left: 0;
+	    background-color: rgba(0,0,0,0.6);
+	    z-index: 9998;
+		>ul{
+		    position: fixed;
+		    background-color: #f1f1f1;
+		    z-index: 9999;
+		    box-shadow: 0 0 3px #666;
+		    border: 3px solid #fff;
+		    border-radius: 4px;
+		    overflow-y: scroll;
+		    >li{
+		    	padding: 6px;
+		    	border-bottom: 1px solid #fff;
+		    }
+		}
+	}
+}
 ul.wis-tabs{
     width: 100%;
     position: fixed;
@@ -488,6 +531,14 @@ ul.wis-tabs{
 			    display: block;
 	    	}
 	    }
+	    >div.wis-nor-select{
+	    	&:before{
+	    		color: #000;
+	    	};
+	    	>select{
+		    	border-color: #ddd;
+		    }
+	    };
 	}
 }
 .wis-card-records{
