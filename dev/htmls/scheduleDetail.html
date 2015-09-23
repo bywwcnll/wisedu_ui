@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>课表查询详情样式</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link href="../css/style.css" rel="stylesheet">
+    <link href="../css/font-awesome.css" rel="stylesheet">
+    <script src="../js/jquery-2.1.1.min.js"></script>
+
+    <script>
+        $(function(){
+            $(".wis-schedule-detail>div").on('click', function(event) {
+                event.preventDefault();
+                var container = $(this).children("div");
+                var i = $(this).find("i");
+                if($(i).hasClass("fa-minus-square-o")){
+                    $(i).removeClass("fa-minus-square-o").addClass("fa-plus-square-o");
+                }else{
+                    $(i).removeClass("fa-plus-square-o").addClass("fa-minus-square-o");
+                }
+                if($(container).is(":visible")){
+                    $(container).slideUp();
+                }else{
+                    $(container).slideDown();
+                }
+            });
+
+        });
+    </script>
+
+</head>
+<body>
+    <div class="wis-schedule-detail">
+        <div>
+            <p><i class="fa fa-minus-square-o"></i>星期一</p>
+            <div class="container">
+                <div>
+                    <div>
+                        <span>节次:</span>
+                        <p>3-5节</p>
+                    </div>
+                    <div>
+                        <span>课程名:</span>
+                        <p>普通电工技术</p>
+                    </div>
+                    <div>
+                        <span>周次:</span>
+                        <p>1-15周</p>
+                    </div>
+                    <div>
+                        <span>地址:</span>
+                        <p>第四实训楼305</p>
+                    </div>
+                    <div>
+                        <span>班级:</span>
+                        <p>14模具01(39人)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <p><i class="fa fa-minus-square-o"></i>星期二</p>
+            <div class="container">
+                <div>
+                    <div>
+                        <span>节次:</span>
+                        <p>3-5节</p>
+                    </div>
+                    <div>
+                        <span>课程名:</span>
+                        <p>普通电工技术</p>
+                    </div>
+                    <div>
+                        <span>周次:</span>
+                        <p>1-15周</p>
+                    </div>
+                    <div>
+                        <span>地址:</span>
+                        <p>第四实训楼305</p>
+                    </div>
+                    <div>
+                        <span>班级:</span>
+                        <p>14模具01(39人)</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <span>节次:</span>
+                        <p>3-5节</p>
+                    </div>
+                    <div>
+                        <span>课程名:</span>
+                        <p>普通电工技术</p>
+                    </div>
+                    <div>
+                        <span>周次:</span>
+                        <p>1-15周</p>
+                    </div>
+                    <div>
+                        <span>地址:</span>
+                        <p>第四实训楼305</p>
+                    </div>
+                    <div>
+                        <span>班级:</span>
+                        <p>14模具01(39人)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

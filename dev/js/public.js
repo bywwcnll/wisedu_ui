@@ -18,12 +18,14 @@ $(function(){
     var _width = $(window).width();
     var _height = $(window).height();
     $(".wis-pop-select>div").height(_height);
-    var _top = ($(".wis-pop-select ul").height())>_height*0.4?_height*0.4:($(".wis-pop-select ul").height());
-    $(".wis-pop-select ul").css({
-      "width": _width*0.6,
-      "left": _width*0.4/2,
-      "top": (_height-_top)/2,
-      "max-height": _height*0.4
+    $.each($(".wis-pop-select ul"), function(index, item){
+      var _top = ($(item).height())>_height*0.4?_height*0.4:($(item).height());
+      $(item).css({
+        "width": _width*0.6,
+        "left": _width*0.4/2,
+        "top": (_height-_top)/2,
+        "max-height": _height*0.4
+      });
     });
   });
 

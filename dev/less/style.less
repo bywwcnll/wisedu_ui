@@ -176,7 +176,7 @@ ul>li{
 		position: relative;
 	    width: 100%;
 	    outline: 0;
-	    border: @norselect-select-border solid @color-secondary;
+	    border: @norselect-select-border solid @norselect-border-color;
 	    border-radius: @norselect-radius;
 	    height: @norselect-height;
 	    font-size: 1rem;
@@ -189,10 +189,12 @@ ul>li{
 .wis-pop-select{
 	position: relative;
 	>p{
-	    border: 1px solid @color-secondary;
+	    border: 1px solid @popselect-border-color;
+	    border-radius: @popselect-radius;
     	padding: 6px 25px 6px 6px;
     	cursor: pointer;
     	position: relative;
+    	height: (@popselect-height)-12px;
     	&:before{
     		position: absolute;
 		    right: 10px;
@@ -576,3 +578,80 @@ ul.wis-tabs{
 		}
 	}
 }
+
+.wis-schedule-search{
+	padding: 20px 8px 0 0;
+	>div.select{
+		position: relative;
+		margin-bottom: 10px;
+		>span{
+			position: absolute;
+			font-size: 14px;
+		    width: 75px;
+		    text-align: right;
+		    line-height: 35px;
+		    height: 35px;
+		    font-weight: bold;
+		    overflow: hidden;
+		    text-overflow: ellipsis;
+		    white-space: nowrap;
+		}
+		>div{
+			margin-left: 80px;
+		}
+	}
+	>div.wis-btn{
+		margin: 20px 0 0 8px;
+	}
+}
+.wis-schedule-detail{
+	>div{
+		margin: 12px;
+		>p{
+			background-color: @color-primary;
+			color: #fff;
+			font-size: 1rem;
+			height: 38px;
+			line-height: 38px;
+			border-radius: 2px;
+			padding-left: 35px;
+			margin-bottom: 10px;
+			position: relative;
+			>i{
+				font-size: 23px;
+				position: absolute;
+				top: 8px;
+				left: 10px;
+			}
+		}
+		>div.container{
+		    border: 1px solid #bbb;
+		    border-radius: 4px;
+		    padding: 8px;
+		    >div{
+		    	border-bottom: 1px dashed #bbb;
+		    	margin-bottom: 10px;
+    			padding-bottom: 10px;
+		    	&:last-child{
+		    		border-bottom: none;
+		    		margin-bottom: 10px;
+    				padding-bottom: 0;
+		    	}
+		    	>div{
+		    		position: relative;
+    				padding-left: 80px;
+    				margin-bottom: 5px;
+    				font-size: 0.9rem;
+		    		>span{
+			    		position: absolute;
+			    		left: 0;
+			    		font-weight: bold;
+			    	}
+		    	}
+		    }
+		}
+	}
+}
+
+
+

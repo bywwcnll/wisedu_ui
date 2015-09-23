@@ -181,9 +181,11 @@ ul > li {
 }
 .wis-pop-select > p {
   border: 1px solid #3bb4f2;
+  border-radius: 2px;
   padding: 6px 25px 6px 6px;
   cursor: pointer;
   position: relative;
+  height: 22px;
 }
 .wis-pop-select > p:before {
   position: absolute;
@@ -546,4 +548,75 @@ ul.wis-tabs > li > span {
 }
 .wis-card-records > table tr > td:last-child {
   color: #f37b1d;
+}
+.wis-schedule-search {
+  padding: 20px 8px 0 0;
+}
+.wis-schedule-search > div.select {
+  position: relative;
+  margin-bottom: 10px;
+}
+.wis-schedule-search > div.select > span {
+  position: absolute;
+  font-size: 14px;
+  width: 75px;
+  text-align: right;
+  line-height: 35px;
+  height: 35px;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.wis-schedule-search > div.select > div {
+  margin-left: 80px;
+}
+.wis-schedule-search > div.wis-btn {
+  margin: 20px 0 0 8px;
+}
+.wis-schedule-detail > div {
+  margin: 12px;
+}
+.wis-schedule-detail > div > p {
+  background-color: #0e90d2;
+  color: #fff;
+  font-size: 1rem;
+  height: 38px;
+  line-height: 38px;
+  border-radius: 2px;
+  padding-left: 35px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.wis-schedule-detail > div > p > i {
+  font-size: 23px;
+  position: absolute;
+  top: 8px;
+  left: 10px;
+}
+.wis-schedule-detail > div > div.container {
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  padding: 8px;
+}
+.wis-schedule-detail > div > div.container > div {
+  border-bottom: 1px dashed #bbb;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+.wis-schedule-detail > div > div.container > div:last-child {
+  border-bottom: none;
+  margin-bottom: 10px;
+  padding-bottom: 0;
+}
+.wis-schedule-detail > div > div.container > div > div {
+  position: relative;
+  padding-left: 80px;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+.wis-schedule-detail > div > div.container > div > div > span {
+  position: absolute;
+  left: 0;
+  font-weight: bold;
 }

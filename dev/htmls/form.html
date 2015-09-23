@@ -66,7 +66,7 @@
 		  	//popselect
 			$(".wis-pop-select>p").on('click', function(event) {
 				event.preventDefault();
-				var div = $(".wis-pop-select>div");
+				var div = $(event.target).next();
 				if($(div).is(':visible')){
 					$(div).hide();
 				}else{
@@ -211,6 +211,7 @@
 				<p>默认选项</p>
 				<div>
 					<ul>
+						<li>默认选项</li>
 						<li>选项1</li>
 						<li>选项2</li>
 						<li>选项3</li>

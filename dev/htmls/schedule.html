@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>课表查询样式</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link href="../css/style.css" rel="stylesheet">
+    <link href="../css/font-awesome.css" rel="stylesheet">
+    <script src="../js/jquery-2.1.1.min.js"></script>
+
+    <script src="../js/public.js"></script>
+
+    <script>
+        $(function(){
+            //popselect
+            $(".wis-pop-select>p").on('click', function(event) {
+                event.preventDefault();
+                var div = $(event.target).next();
+                if($(div).is(':visible')){
+                    $(div).hide();
+                }else{
+                    $(div).show();
+                    $("body").css("overflow", "hidden");
+                    var wheight = $(window).height();
+                    var ulheight = $(div).children('ul').height();
+                    var ultop = ulheight>wheight*0.4?wheight*0.4:ulheight;
+                    $(div).children('ul').css("top", (wheight-ultop)/2+"px");
+                    $(div).children('ul').one('click', function(event) {
+                        var txt = $(event.target).text();
+                        var p = $($(event.target).parent().parent().parent()).children("p");
+                        $(p).text(txt);
+                        $("body").css("overflow", "auto");
+                        $(div).hide();
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="wis-schedule-search">
+        <div class="select">
+            <span>学年:</span>
+            <div>
+                <div class="wis-pop-select">
+                    <p>默认选项</p>
+                    <div>
+                        <ul>
+                            <li>默认选项</li>
+                            <li>选项1</li>
+                            <li>选项2</li>
+                            <li>选项3</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="select">
+            <span>学期:</span>
+            <div>
+                <div class="wis-pop-select">
+                    <p>默认选项</p>
+                    <div>
+                        <ul>
+                            <li>默认选项</li>
+                            <li>选项1</li>
+                            <li>选项2</li>
+                            <li>选项3</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="select">
+            <span>所在院系:</span>
+            <div>
+                <div class="wis-pop-select">
+                    <p>默认选项</p>
+                    <div>
+                        <ul>
+                            <li>默认选项</li>
+                            <li>选项1</li>
+                            <li>选项2</li>
+                            <li>选项3</li>
+                            <li>选项1</li>
+                            <li>选项2</li>
+                            <li>选项3</li>
+                            <li>选项1</li>
+                            <li>选项2</li>
+                            <li>选项3</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="select">
+            <span>教师:</span>
+            <div>
+                <div class="wis-pop-select">
+                    <p>默认选项</p>
+                    <div>
+                        <ul>
+                            <li>默认选项</li>
+                            <li>选项1</li>
+                            <li>选项2</li>
+                            <li>选项3</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wis-btn"><button type="button" class="wis-btn-primary" onclick="window.location.href='scheduleDetail.html';">查询</button></div>
+    </div>
+</body>
+</html>
