@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>成绩列表样式</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link href="../css/style.css" rel="stylesheet">
+    <link href="../css/font-awesome.css" rel="stylesheet">
+    <script src="../js/jquery-2.1.1.min.js"></script>
+
+    <link href="../css/animate.css" rel="stylesheet">
+
+    <script>
+        $(function(){
+            loadAnimate($(".wis-scoreList>div"), 0, "lightSpeedIn", 600);
+        });
+
+
+
+
+        //动画调用接口
+        function loadAnimate(models, fromIndex, animateName, speed){
+            $(models).css({
+                "-webkit-animation-duration": speed+"ms",
+                "animation-duration": speed+"ms"
+            });
+            $(models[fromIndex++]).show().addClass(animateName+' animated');
+            var clearCode = setInterval(function(){
+                $(models[fromIndex++]).show().addClass(animateName+' animated');
+                if(models.length <= fromIndex){
+                    window.clearInterval(clearCode);
+                }
+            }, speed);
+        }
+    </script>
+
+</head>
+<body>
+    <div class="wis-scoreList">
+        <i class="fa fa-html5"></i>
+        <div>
+            <div class="bghead">
+                <div></div>
+            </div>
+            <div class="content">
+                <div class="headInfo">
+                    <p>金融专业英语</p>
+                    <span>2014</span>
+                </div>
+                <div class="detail">
+                    <p>学年：2014 | 学期：1</p>
+                    <p>成绩：80 | 绩点：</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="bghead">
+                <div></div>
+            </div>
+            <div class="content">
+                <div class="headInfo">
+                    <p>网络金融（二）</p>
+                </div>
+                <div class="detail">
+                    <p>学年：2014 | 学期：1</p>
+                    <p>成绩：60 | 绩点：</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="bghead">
+                <div></div>
+            </div>
+            <div class="content">
+                <div class="headInfo">
+                    <p>金融专业英语</p>
+                </div>
+                <div class="detail">
+                    <p>学年：2014 | 学期：1</p>
+                    <p>成绩：80 | 绩点：</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="bghead">
+                <div></div>
+            </div>
+            <div class="content">
+                <div class="headInfo">
+                    <p>网络金融（二）</p>
+                </div>
+                <div class="detail">
+                    <p>学年：2014 | 学期：1</p>
+                    <p>成绩：60 | 绩点：</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="bghead">
+                <div></div>
+            </div>
+            <div class="content">
+                <div class="headInfo">
+                    <p>金融专业英语</p>
+                </div>
+                <div class="detail">
+                    <p>学年：2014 | 学期：1</p>
+                    <p>成绩：80 | 绩点：</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="bghead">
+                <div></div>
+            </div>
+            <div class="content">
+                <div class="headInfo">
+                    <p>网络金融（二）</p>
+                </div>
+                <div class="detail">
+                    <p>学年：2014 | 学期：1</p>
+                    <p>成绩：60 | 绩点：</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

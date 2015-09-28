@@ -1,5 +1,4 @@
 /*******************base-color***********************/
-/***************news-notice-list-color****************/
 /*******************border-width***********************/
 /*******************border-radius***********************/
 /*******************width&height***********************/
@@ -494,7 +493,7 @@ ul.wis-tabs > li > span {
   margin-right: 10px;
 }
 .wis-card > div.search {
-  border: solid #ddd;
+  border: solid #dddddd;
   border-width: 1px 0;
   padding: 10px;
   font-size: 1rem;
@@ -511,10 +510,10 @@ ul.wis-tabs > li > span {
   display: block;
 }
 .wis-card > div.search > div.wis-nor-select:before {
-  color: #000;
+  color: #000000;
 }
 .wis-card > div.search > div.wis-nor-select > select {
-  border-color: #ddd;
+  border-color: #dddddd;
 }
 .wis-card-records {
   padding: 8px;
@@ -528,7 +527,7 @@ ul.wis-tabs > li > span {
   font-size: 1rem;
   text-align: left;
   margin-bottom: 0;
-  color: #aaa;
+  color: #aaaaaa;
 }
 .wis-card-records > table th {
   font-size: 0.8rem;
@@ -536,7 +535,7 @@ ul.wis-tabs > li > span {
   padding: 8px 0;
   border: none;
   background-color: #e6e6e6;
-  color: #000;
+  color: #000000;
 }
 .wis-card-records > table tr > td {
   border-width: 0 0 1px 0;
@@ -544,7 +543,7 @@ ul.wis-tabs > li > span {
   width: 22%;
 }
 .wis-card-records > table tr > td > span {
-  color: #aaa;
+  color: #aaaaaa;
 }
 .wis-card-records > table tr > td:last-child {
   color: #f37b1d;
@@ -619,4 +618,65 @@ ul.wis-tabs > li > span {
   position: absolute;
   left: 0;
   font-weight: bold;
+}
+.wis-scoreList {
+  padding: 10px;
+}
+.wis-scoreList > i {
+  position: fixed;
+  color: #C5C2C2;
+  font-size: 13rem;
+  top: 100px;
+  left: 80px;
+}
+.wis-scoreList > div {
+  position: relative;
+  margin-bottom: 14px;
+  display: none;
+}
+.wis-scoreList > div > div.bghead {
+  height: 6px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.wis-scoreList > div > div.bghead > div {
+  height: 20px;
+  border-radius: 10px;
+  background-color: #0e90d2;
+}
+.wis-scoreList > div > div.content {
+  opacity: 0.8;
+  background-color: #fff;
+  border: solid #ddd;
+  box-shadow: 0px 2px #dddddd;
+  border-width: 0 1px 1px 1px;
+  border-radius: 3px 3px 10px 10px;
+  padding: 0px 5px 5px 5px;
+}
+.wis-scoreList > div > div.content > div.headInfo {
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+}
+.wis-scoreList > div > div.content > div.headInfo > p {
+  margin: 0 4rem 0 0rem;
+  font-size: 1.2rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.wis-scoreList > div > div.content > div.headInfo > span {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 1rem;
+}
+.wis-scoreList > div > div.content > div.detail {
+  font-size: 0.8rem;
+}
+.wis-scoreList > div > div.content > div.detail > p {
+  margin: 5px 0 0;
 }
